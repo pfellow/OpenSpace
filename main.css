@@ -1,0 +1,122 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    background: black;
+}
+
+.space {
+    background-image: url("images/space.png");
+    margin: auto;
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+}
+
+.planet-area {
+    overflow: hidden;
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    align-self: flex-end;
+    align-items: flex-end;
+}
+
+.planet{
+    width: 30vw;
+    margin: -1vh;
+    z-index: 1;
+}
+.rocket {
+    position: absolute;
+    transform: rotate(25deg);
+    width: 12vw;
+    left: 25vw;
+    bottom: 14vw;
+    z-index: 0;
+}
+
+
+.control-panel {
+    border-radius: 5px;
+    width: 35%;
+    display: flex;
+    align-self: center;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-image: repeating-linear-gradient(45deg, black, black 10px, yellow 10px, yellow 25px);
+}
+
+.control-panel__inner {
+    margin: 2%;
+    width: 90%;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    background-color: slategrey;
+    padding: 2%;
+}
+
+.check-buttons, .levers{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin: 2%;
+}
+
+input[type="range"] {
+    transform: rotate(270deg) scale(1.2);
+    margin: 20% -50% 20% -50%;
+}
+
+input[type="password"] {
+    border-color: yellow;
+    color: yellow;
+    font-size: 2vh;
+    background-color: transparent;
+    border-radius: 5px;
+    margin: 2%;
+}
+
+::placeholder {
+    color: yellow;
+}
+
+#unlock {
+    font-size: 2vh;
+    background-color: yellow;
+    border-radius: 5px;
+    margin: 2%;
+}
+
+#launch {
+    background-color: red;
+    font-size: 2vh;
+    color: yellow;
+    height: 4vh;
+    border-radius: 30px;
+    border: 2px solid yellow;
+}
+
+#launch:active {
+    background-color: yellow;
+    color: red;
+    border: 2px solid red;
+}
+input[type="checkbox"] {
+    transform: scale(2);
+}
+
+@keyframes flight {
+    from {left: 25vw;
+        bottom: 14vw; }
+    to {left: 40vw;
+        bottom: 80vw; }
+}
+
+.flight {
+    animation: 4s ease-in flight;
+}
